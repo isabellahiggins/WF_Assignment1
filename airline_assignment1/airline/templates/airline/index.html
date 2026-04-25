@@ -1,0 +1,67 @@
+<html>
+<head>
+    <title> Dublin Airlines - Book a Flight </title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" >  
+
+    <style>
+        body{
+            background-color: #f8f9fa;
+            padding:20px;
+        }
+
+        .navBar{
+            background-color: #572A79;
+        }
+
+        .navBar a{
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .footer{
+            text-align: center;
+            color: #572A79;
+            margin-top: auto;
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class ="navBar">
+        <a href="/login">Login</a>"
+        <a href="/">Flights</a>
+        <a href="/bookings/">Bookings</a>
+        <a href="/passengers/">Passengers</a>
+        <a href="/invoices/">Invoices</a>
+    </nav>
+
+
+    <div class ="flight-list">
+        <h1> Available Flights </h1>
+        <table class="flight-info">
+            <tr>
+                <th> Flight Number </th>
+                <th> Departure </th>
+                <th> Destination </th>
+                <th> Price </th>
+            </tr>
+
+            {% for flight in flights %}
+            <tr>
+                <td><a href="/flight/{{ flight.id }}/">{{ flight.flight_number }}</a></td>
+                <td>{{ flight.departure }}</td>
+                <td>{{ flight.destination }}</td>
+                <td>${{ flight.price }}</td>
+            </tr>
+            {% endfor %}
+            </table>
+    </div>
+
+    <div class="footer">
+        <p> Dublin Airlines © 2026 </p>
+    </div>
+</body>
+</html>
