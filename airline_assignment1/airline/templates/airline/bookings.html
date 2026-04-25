@@ -1,6 +1,6 @@
 <html>
 <head>
-    <title> Dublin Airlines - Booking & Details </title>
+    <title> Dublin Airlines - Book a Flight </title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" >  
 
     <style>
@@ -40,14 +40,32 @@
 
 
     <div class ="flight-list">
-        <h1> Flight Details </h1>
-        <p>Flight Number: {{ flight.flight_number }}</p>
-        <p>Departure: {{ flight.departure }}</p>
-        <p>Destination: {{ flight.destination }}</p>
-        <p>Price: ${{ flight.price }}</p>
+        <h1> Bookings </h1>
+        <table class="flight-info">
+            <thead>
+            <tr>
+                <th> Booking ID </th>
+                <th> Flight ID </th>
+                <th> Departure </th>
+                <th> Destination </th>
+                <th> Flight Class </th>
+                <th> Price </th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for booking in bookings %}
 
-        <a href="/book/{{flight.id}}/" style="background-color: #572A79; color: white; padding: 10px 20px; text-decoration: none;">Book Now!</a>
-        <a href="/" style="color: #572A79; padding: 10px 20px; text-decoration: none;">Back to Flights</a>
+            <tr>
+                <td>{{booking.id}}</td>
+                <td>{{ booking.flight.flight_number }}</td>
+                <td>{{ booking.flight.departure }}</td>
+                <td>{{ booking.flight.destination }}</td>
+                <td>{{ booking.seat_class }}</td>
+                <td>${{ booking.flight.price }}</td>
+            </tr>
+            {% endfor %}
+            </tbody>
+        </table>
     </div>
 
     <div class="footer">

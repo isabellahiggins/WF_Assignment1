@@ -7,5 +7,8 @@ urlpatterns = [
     path('book/<int:flight_id>/', views.book_a_flight, name='book_a_flight'),
     path('bookings/', views.bookings, name='bookings'),
     path('invoices/', views.invoices, name='invoices'),
+    path('login/', views.loginUser, name='login'),
+    path('register/', views.registerUser, name='register'),
+    path('logout/', views.logoutUser, name='logout')
 
 ]

@@ -1,6 +1,6 @@
 <html>
 <head>
-    <title> Dublin Airlines - Booking & Details </title>
+    <title> Dublin Airlines - Book a Flight </title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" >  
 
     <style>
@@ -39,15 +39,24 @@
     </nav>
 
 
-    <div class ="flight-list">
-        <h1> Flight Details </h1>
-        <p>Flight Number: {{ flight.flight_number }}</p>
+    <div class ="bookFlight">
+        <h1> Book your flight below </h1>
+        <p>Flight: {{ flight.flight_number }}</p>
         <p>Departure: {{ flight.departure }}</p>
         <p>Destination: {{ flight.destination }}</p>
         <p>Price: ${{ flight.price }}</p>
 
-        <a href="/book/{{flight.id}}/" style="background-color: #572A79; color: white; padding: 10px 20px; text-decoration: none;">Book Now!</a>
-        <a href="/" style="color: #572A79; padding: 10px 20px; text-decoration: none;">Back to Flights</a>
+        <form method="post">
+            {% csrf_token %}
+           <p>Seat class:</p>
+            <select name="seat_class" required>
+                <option value="First Class">First Class</option>
+                <option value="Economy">Economy</option>
+                <option value="Business">Business</option>
+            </select>   
+            <button type="submit">Book Flight</button>
+        </form>
+        <a href="/"> View flights</a>
     </div>
 
     <div class="footer">
