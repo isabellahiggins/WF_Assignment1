@@ -31,12 +31,15 @@
 
 <body>
     <nav class ="navBar">
-        <a href="/login">Login</a>"
         <a href="/">Flights</a>
         <a href="/bookings/">Bookings</a>
+        {% if user.is_staff or user.groups.all.0.name == 'Travel Agent'%}
         <a href="/passengers/">Passengers</a>
+        {% endif %}
         <a href="/invoices/">Invoices</a>
+        <a href="/logout/">Logout</a>
     </nav>
+
 
 
     <div class ="flight-list">
@@ -62,6 +65,9 @@
                 <td>{{ booking.flight.destination }}</td>
                 <td>{{ booking.seat_class }}</td>
                 <td>${{ booking.flight.price }}</td>
+                {% if user.groups.all.0.name == 'Travel Agent' %}
+                <td><a href="/booking/{{ booking.id }}/cancel/" style="color: red;">Cancel</a></td>
+                {% endif %}
             </tr>
             {% endfor %}
             </tbody>

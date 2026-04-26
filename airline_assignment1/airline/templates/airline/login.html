@@ -1,3 +1,4 @@
+{% load static %}
 <html>
 <head>
     <title> Dublin Airlines - Book a Flight </title>
@@ -5,40 +6,87 @@
 
     <style>
         body{
+            background-image: url("{% static 'airline/images/background.jpg' %}");
+            background-size: cover;
+            background-position: center;
             background-color: #f8f9fa;
             padding:20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
 
-        .navBar{
-            background-color: #572A79;
+        .loginForm{
+            background-color: rgb(20, 20, 20, 0.6);
+            padding: 40px;
+            border-radius: 5px;
+            max-width: 400px;
+            margin: 50px auto;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            padding-top: 30px;
+            padding-bottom: 30px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+        
         }
 
-        .navBar a{
+        .loginForm input[type="submit"]{
+            background-color: rgb(0, 140, 255);
             color: white;
-            padding: 14px 20px;
-            text-decoration: none;
-            display: inline-block;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+            padding: 5px;
+        }
+
+        .loginForm input[type="submit"]:hover{
+        background-color: #c7c7c7;
         }
 
         .footer{
             text-align: center;
-            color: #572A79;
             margin-top: auto;
             padding: 20px;
+        }
+
+        a{
+            color: rgb(0, 140, 255);
+            text-decoration: none;
+        }
+
+        a:hover{
+            color: #999999;
+            text-decoration: underline;
+        }
+
+        h1{
+            color: white;
+        }
+
+        p{
+            color: white;
+            font-size: 18px;
+        }
+
+        .footer{
+            text-align: center; 
+            margin-top: auto;
+            padding: 20px;
+            color: white;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .loginForm input[type="text"]{
+            border-radius: 5px;
+        }
+
+        .loginForm input[type="password"]{
+            border-radius: 5px;
         }
     </style>
 </head>
 
 <body>
-    <nav class ="navBar">
-        <a href="/login">Login</a>"
-        <a href="/">Flights</a>
-        <a href="/bookings/">Bookings</a>
-        <a href="/passengers/">Passengers</a>
-        <a href="/invoices/">Invoices</a>
-    </nav>
-
-
     <div class ="loginForm">
         <h1> Login  </h1>
         {% if error %}
@@ -50,7 +98,7 @@
             <p>Password: <input type="password" name="password"></p>
             <input type="submit" value="Login">
         </form>
-        <p>Don't have an account? <a href="/register/" style="color: #572A79;">Register here</a></p>
+        <p>Don't have an account? <a href="/register/">Register here</a></p>
     </div>
 
     <div class="footer">

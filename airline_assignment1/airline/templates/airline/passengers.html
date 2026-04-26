@@ -38,36 +38,28 @@
         {% endif %}
         <a href="/invoices/">Invoices</a>
         <a href="/logout/">Logout</a>
+        
     </nav>
 
 
     <div class ="flight-list">
-        <h1> Invoices </h1>
-        <table class="flight-info">
+        <h1>Passengers</h1>
+        <table class="table">
             <thead>
-            <tr>
-                <th> Invoice ID </th>
-                <th> Booking ID </th>
-                <th> Flight </th>
-                <th> Departure </th>
-                <th> Date </th>
-                <th> Total Price </th>
-                <th> Current Status </th>
-            </tr>
+                <tr>
+                    <th>Name</th>
+                    <th>Passport Number</th>
+                    <th>Phone</th>
+                </tr>
             </thead>
             <tbody>
-            {% for invoice in invoices %}
-
-            <tr>
-                <td>{{invoice.id}}</td>
-                <td>{{ invoice.booking.id }}</td>
-                <td>{{ invoice.booking.flight.flight_number }}</td>
-                <td>{{ invoice.booking.flight.departure }}</td>
-                <td>{{ invoice.issued_date }}</td>
-                <td>${{ invoice.booking.flight.price }}</td>
-                <td>{{ invoice.status }}</td>
-            </tr>
-            {% endfor %}
+                {% for passenger in passengers %}
+                <tr>
+                    <td>{{ passenger.name }}</td>
+                    <td>{{ passenger.passport_number }}</td>
+                    <td>{{ passenger.phone }}</td>
+                </tr>
+                {% endfor %}
             </tbody>
         </table>
     </div>
