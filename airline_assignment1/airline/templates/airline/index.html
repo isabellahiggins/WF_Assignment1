@@ -1,3 +1,4 @@
+{% load static %}
 <html>
 <head>
     <title> Dublin Airlines - Book a Flight </title>
@@ -5,12 +6,23 @@
 
     <style>
         body{
+            background-image: url("{% static 'airline/images/background.jpg' %}");
+            background-size: cover;
+            background-position: center;
             background-color: #f8f9fa;
-            padding:20px;
+            padding:0px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
         }
 
         .navBar{
-            background-color: #572A79;
+            background-color: rgb(0, 140, 255);
+            width: 100%;
+            font-size: 25px;
+            font-weight: bold;
         }
 
         .navBar a{
@@ -21,11 +33,55 @@
         }
 
         .footer{
-            text-align: center;
-            color: #572A79;
+            text-align: center; 
             margin-top: auto;
             padding: 20px;
+            color: white;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
         }
+
+         .flight-list{
+            background-color: rgb(20,20,20,0.6);
+            padding: 40px;
+            border-radius: 5px;
+            max-width: 800px;
+            margin: 50px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+
+        }
+
+        a{
+            color: rgb(0, 140, 255);
+            text-decoration: none;
+        }
+
+        a:hover{
+            color: #999999;
+            text-decoration: underline;
+        }
+
+        h1{
+            color: white;
+        }
+
+        p{
+            color: white;
+            font-size: 25px;
+        }
+
+        td{
+            color: white;
+            font-size: 20px;
+        }
+
+        th{
+            color:white;
+            padding: 5px;
+            font-size: 25px;
+        }
+
     </style>
 </head>
 

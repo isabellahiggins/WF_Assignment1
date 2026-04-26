@@ -1,3 +1,4 @@
+{% load static %}
 <html>
 <head>
     <title> Dublin Airlines - Book a Flight </title>
@@ -5,12 +6,23 @@
 
     <style>
         body{
+            background-image: url("{% static 'airline/images/background.jpg' %}");
+            background-size: cover;
+            background-position: center;
             background-color: #f8f9fa;
-            padding:20px;
+            padding:0px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
         }
 
         .navBar{
-            background-color: #572A79;
+            background-color: rgb(0, 140, 255);
+            width: 100%;
+            font-size: 25px;
+            font-weight: bold;
         }
 
         .navBar a{
@@ -20,12 +32,62 @@
             display: inline-block;
         }
 
+        .bookFlight{
+            background-color: rgb(20,20,20,0.6);
+            padding: 40px;
+            border-radius: 5px;
+            max-width: 800px;
+            margin: 50px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+
+        }
+
+        button[type="submit"]{
+            background-color: rgb(0, 140, 255);
+            color: white;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.6);
+            padding: 5px;
+        }
+        
+        button[type="submit"]:hover{
+            background-color: #c7c7c7;
+        }
+
+        select{
+            border-radius: 5px;
+            padding: 6px;
+        }
+
+        a{
+            color: rgb(0, 140, 255);
+            text-decoration: none;
+        }
+
+        a:hover{
+            color: #999999;
+            text-decoration: underline;
+        }
+
+        h1{
+            color: white;
+        }
+
+        p{
+            color: white;
+            font-size: 25px;
+        }
+
         .footer{
-            text-align: center;
-            color: #572A79;
+            text-align: center; 
             margin-top: auto;
             padding: 20px;
+            color: white;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
         }
+
     </style>
 </head>
 
@@ -35,7 +97,6 @@
         <a href="/bookings/">Bookings</a>
         {% if user.is_staff or user.groups.all.0.name == 'Travel Agent'%}
         <a href="/passengers/">Passengers</a>
-        {% endif %}
         {% endif %}
         <a href="/invoices/">Invoices</a>
         <a href="/logout/">Logout</a>

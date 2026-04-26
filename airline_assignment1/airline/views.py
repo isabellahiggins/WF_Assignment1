@@ -72,13 +72,19 @@ def logoutUser(request):
 def book_a_flight(request, flight_id):
     flight = Flight.objects.get(id=flight_id)
     if request.method == 'POST':
-        passenger = Passenger.objects.get(user)
+        passenger = Passenger.objects.get(user=request.user)
         booking = Booking.objects.create(
             flight=flight,
             passenger=passenger,
             status='confirmed',
             seat_class=request.POST['seat_class']
         )
+        
+        Invoice.objects.create(
+                booking=booking,
+                total=flight.price,
+                status='unpaid'
+            )
         return redirect('bookings')
     return render(request, 'airline/book_a_flight.html', {'flight': flight})
 
