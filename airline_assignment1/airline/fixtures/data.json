@@ -1,0 +1,387 @@
+[
+{
+  "model": "auth.user",
+  "pk": 1,
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$eIxUZgbq0s3W9ZuINvfqQI$yDON5LjilwAXvDR4P3XKJsW8nh5sOZbDr3qJtvx4Wag=",
+    "last_login": "2026-04-26T22:54:26.933Z",
+    "is_superuser": true,
+    "username": "admin",
+    "first_name": "",
+    "last_name": "",
+    "email": "admin@example.com",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2026-04-24T01:55:54Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 2,
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$6m6u6W5M4FFxsk3orwB7eh$hnvDd3iURZp60FYJ09AoYB2Me4uusfJEZQr2XI6Y86g=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "username1",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-04-24T02:23:27.407Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 3,
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$qO8HtDTdeIhh5ieu48Dseg$vinOpiPzkor+cMBc3N5hyeMUNazCiuvnYdKLM0V0YXI=",
+    "last_login": "2026-04-27T17:09:23.523Z",
+    "is_superuser": false,
+    "username": "tester",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-04-25T21:15:34Z",
+    "groups": [
+      3
+    ],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 4,
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$AP9i1ASI1tOIRdSDzg3s4A$as5cPXD99NYbboMdaysgRl2AKSwDHAFwCesBulisWwQ=",
+    "last_login": "2026-04-25T22:00:00Z",
+    "is_superuser": false,
+    "username": "passenger1",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-04-25T21:17:53Z",
+    "groups": [
+      2
+    ],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 5,
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$XACmKAlhEuoPh1rh0y4A7h$bBIqrGIld4CcefhCDkjN2mokCLaJodxu87uY2QipGLo=",
+    "last_login": "2026-04-25T21:59:40Z",
+    "is_superuser": false,
+    "username": "passenger2",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-04-25T21:59:39Z",
+    "groups": [
+      2
+    ],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 6,
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$7L1BTwYLDoiNd2mjFmrMCw$40jDYriQt4r7Pq0Pf9bjRJIhr2xqfjr07+1dtqfRuu4=",
+    "last_login": "2026-04-27T17:17:58.228Z",
+    "is_superuser": false,
+    "username": "passenger3",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-04-25T22:00:18Z",
+    "groups": [
+      2
+    ],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 7,
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$bsj34gi9e4d0goAirzIytL$tZShDJETH/k7TgPrFUZMrF18l3cHd3xSSF0Mxikoct4=",
+    "last_login": "2026-04-27T17:08:58.640Z",
+    "is_superuser": false,
+    "username": "isabella",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2026-04-26T17:12:02Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.group",
+  "pk": 1,
+  "fields": {
+    "name": "Staff",
+    "permissions": []
+  }
+},
+{
+  "model": "auth.group",
+  "pk": 2,
+  "fields": {
+    "name": "Passenger",
+    "permissions": []
+  }
+},
+{
+  "model": "auth.group",
+  "pk": 3,
+  "fields": {
+    "name": "Travel Agent",
+    "permissions": []
+  }
+},
+{
+  "model": "airline.flight",
+  "pk": 1,
+  "fields": {
+    "flight_number": "LON01",
+    "departure": "Dublin",
+    "destination": "London",
+    "departure_time": "2026-04-21T06:00:00Z",
+    "arrival_time": "2026-04-21T12:00:00Z",
+    "price": "25.00"
+  }
+},
+{
+  "model": "airline.flight",
+  "pk": 2,
+  "fields": {
+    "flight_number": "BRA01",
+    "departure": "Dublin",
+    "destination": "Brazil",
+    "departure_time": "2026-06-08T00:00:00Z",
+    "arrival_time": "2026-06-06T18:00:00Z",
+    "price": "550.00"
+  }
+},
+{
+  "model": "airline.flight",
+  "pk": 3,
+  "fields": {
+    "flight_number": "ARG09",
+    "departure": "Argentina",
+    "destination": "Belgium",
+    "departure_time": "2026-04-26T22:55:11Z",
+    "arrival_time": "2026-04-26T03:55:16Z",
+    "price": "600.00"
+  }
+},
+{
+  "model": "airline.flight",
+  "pk": 4,
+  "fields": {
+    "flight_number": "CRO76",
+    "departure": "Croatia",
+    "destination": "Denmark",
+    "departure_time": "2026-09-15T16:23:00Z",
+    "arrival_time": "2026-09-15T22:23:00Z",
+    "price": "400.00"
+  }
+},
+{
+  "model": "airline.flight",
+  "pk": 5,
+  "fields": {
+    "flight_number": "EQU87",
+    "departure": "Equador",
+    "destination": "Finland",
+    "departure_time": "2026-07-31T23:00:00Z",
+    "arrival_time": "2026-08-01T04:00:00Z",
+    "price": "230.00"
+  }
+},
+{
+  "model": "airline.passenger",
+  "pk": 1,
+  "fields": {
+    "user": 2,
+    "name": "Isabella",
+    "passport_number": "123456",
+    "phone": "0852600903"
+  }
+},
+{
+  "model": "airline.passenger",
+  "pk": 5,
+  "fields": {
+    "user": 4,
+    "name": "Sonya Higgins",
+    "passport_number": "123456789",
+    "phone": "08612309887"
+  }
+},
+{
+  "model": "airline.passenger",
+  "pk": 6,
+  "fields": {
+    "user": 5,
+    "name": "Claudia Higgins",
+    "passport_number": "987654321",
+    "phone": "086999994328"
+  }
+},
+{
+  "model": "airline.passenger",
+  "pk": 7,
+  "fields": {
+    "user": 6,
+    "name": "Sean Kelly",
+    "passport_number": "987654321",
+    "phone": "0852600903"
+  }
+},
+{
+  "model": "airline.booking",
+  "pk": 1,
+  "fields": {
+    "passenger": 1,
+    "flight": 2,
+    "seat_class": "economy",
+    "status": "cancelled",
+    "created_at": "2026-04-24T02:24:19.304Z"
+  }
+},
+{
+  "model": "airline.booking",
+  "pk": 5,
+  "fields": {
+    "passenger": 7,
+    "flight": 2,
+    "seat_class": "First Class",
+    "status": "cancelled",
+    "created_at": "2026-04-26T22:45:57.114Z"
+  }
+},
+{
+  "model": "airline.booking",
+  "pk": 6,
+  "fields": {
+    "passenger": 7,
+    "flight": 1,
+    "seat_class": "Economy",
+    "status": "cancelled",
+    "created_at": "2026-04-26T22:46:04.842Z"
+  }
+},
+{
+  "model": "airline.booking",
+  "pk": 7,
+  "fields": {
+    "passenger": 7,
+    "flight": 1,
+    "seat_class": "Business",
+    "status": "cancelled",
+    "created_at": "2026-04-26T22:52:49.600Z"
+  }
+},
+{
+  "model": "airline.booking",
+  "pk": 8,
+  "fields": {
+    "passenger": 7,
+    "flight": 1,
+    "seat_class": "Economy",
+    "status": "cancelled",
+    "created_at": "2026-04-26T22:53:54.327Z"
+  }
+},
+{
+  "model": "airline.booking",
+  "pk": 9,
+  "fields": {
+    "passenger": 7,
+    "flight": 4,
+    "seat_class": "Economy",
+    "status": "cancelled",
+    "created_at": "2026-04-26T23:17:36.108Z"
+  }
+},
+{
+  "model": "airline.booking",
+  "pk": 10,
+  "fields": {
+    "passenger": 7,
+    "flight": 5,
+    "seat_class": "Economy",
+    "status": "confirmed",
+    "created_at": "2026-04-27T17:20:23.137Z"
+  }
+},
+{
+  "model": "airline.invoice",
+  "pk": 1,
+  "fields": {
+    "booking": 1,
+    "issued_date": "2026-04-24T02:25:29.396Z",
+    "total": "550.00",
+    "status": "unpaid"
+  }
+},
+{
+  "model": "airline.invoice",
+  "pk": 2,
+  "fields": {
+    "booking": 8,
+    "issued_date": "2026-04-26T22:53:54.330Z",
+    "total": "25.00",
+    "status": "unpaid"
+  }
+},
+{
+  "model": "airline.invoice",
+  "pk": 3,
+  "fields": {
+    "booking": 9,
+    "issued_date": "2026-04-26T23:17:36.112Z",
+    "total": "400.00",
+    "status": "unpaid"
+  }
+},
+{
+  "model": "airline.invoice",
+  "pk": 4,
+  "fields": {
+    "booking": 10,
+    "issued_date": "2026-04-27T17:20:23.163Z",
+    "total": "230.00",
+    "status": "unpaid"
+  }
+},
+{
+  "model": "airline.invoiceitem",
+  "pk": 1,
+  "fields": {
+    "invoice": 1,
+    "description": "Dublin - Brazil - Economy",
+    "quantity": 1,
+    "price_per_unit": "550.00"
+  }
+}
+]
