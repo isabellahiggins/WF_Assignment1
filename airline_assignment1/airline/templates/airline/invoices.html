@@ -36,7 +36,7 @@
             background-color: rgb(20,20,20,0.6);
             padding: 40px;
             border-radius: 5px;
-            max-width: 900px;
+            max-width: 1050px;
             margin: 50px;
             box-shadow: 0 0 10px rgba(0,0,0,0.1);
 
@@ -106,6 +106,7 @@
                 <th> Date </th>
                 <th> Total Price </th>
                 <th> Current Status </th>
+                <th> Booking Status</th>
             </tr>
             </thead>
             <tbody>
@@ -119,6 +120,7 @@
                 <td>{{ invoice.issued_date }}</td>
                 <td>${{ invoice.booking.flight.price }}</td>
                 <td>{{ invoice.status }}</td>
+                <td> {{ invoice.booking.status }}</td>
             </tr>
             {% endfor %}
             </tbody>
